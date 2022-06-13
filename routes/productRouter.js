@@ -34,4 +34,21 @@ router.put('/:id', productController.updateProduct)
 
 router.delete('/:id', productController.deleteProduct)
 
+//import controller animalIn
+
+const animalInController = require ('../controllers/animalInController')
+
+
+
+//utilisation des router
+
+router.post('/addAnimalIn', animalInController.upload,animalInController.addAnimalIn)
+
+router.get('/getAllAnimalIn', animalInController.getAllAnimalIn)
+
+//check 2
+
+router.get('/:id',animalInController.getOneAnimalIn)
+router.put("/:id",animalInController.updateAnimalIn)
+router.delete('/:id',animalInController.deleteAnimalIn)
 module.exports = router
