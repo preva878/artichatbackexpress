@@ -13,7 +13,7 @@ app.use(express.urlencoded({ extended: true }))
 
 // routers
 const router = require('./routes/productRouter.js')
-app.use('/api/products', router)
+app.use('/api', router)
 
 //static Images Folder
 
@@ -22,7 +22,7 @@ app.use('/Images', express.static('./Images'))
 
 //port
 
-const PORT = process.env.PORT || 8080
+const PORT = process.env.PORT || 3000
 
 //server
 
