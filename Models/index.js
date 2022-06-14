@@ -47,7 +47,7 @@ db.Veterinaire = require('./veterinaireModel')(sequelize,DataTypes)
 
 db.sequelize.sync({ force: false })
 .then(() => {
-    console.log('yes re-sync done!')
+    console.log(`resync done`)
 })
 
 
@@ -57,12 +57,12 @@ db.sequelize.sync({ force: false })
 db.products.hasMany(db.reviews, {
     foreignKey: 'product_id',
     as: 'review'
-})
+});
 
 db.reviews.belongsTo(db.products, {
     foreignKey: 'product_id',
     as: 'product'
-})
+});
 
 db.AnimalIn.belongsToMany(db.FamilleAccueil,{through:'AnimalInFA'});
 db.FamilleAccueil.belongsToMany(db.AnimalIn,{through:'AnimalInFA'});

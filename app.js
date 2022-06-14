@@ -22,7 +22,7 @@ app.options((req,res,next) =>{
 })
 // routers
 const router = require('./routes/productRouter.js')
-const routeranimalin = require('./routes/animalInRouter')
+
 app.use('/api', router)
 
 
