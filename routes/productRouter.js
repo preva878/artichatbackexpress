@@ -28,7 +28,7 @@ router.post('/addAnimalIn', animalInController.upload,animalInController.addAnim
 router.get('/getAllAnimalIns', animalInController.getAllAnimalIns)
 //utilisation des router out
 router.post('/addAnimalOut', animalOutController.upload,animalOutController.addAnimalOut)
-router.get('/getAllAnimalOut',animalOutController.getAllAnimalOut)
+router.get('/getAllAnimalOuts',animalOutController.getAllAnimalOut)
 //check 2
 
 router.get('/animalIn/:id',animalInController.getOneAnimalIn)
