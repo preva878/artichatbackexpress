@@ -10,7 +10,7 @@ const AnimalIn = db.AnimalIn
 //1.addanimalin
 
 const addAnimalIn = async (req,res) => {
-    console.log(42);
+    
     let info = {
         Image: req.file.path,
         Nom: req.body.Nom,
