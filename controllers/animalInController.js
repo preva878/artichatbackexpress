@@ -10,6 +10,7 @@ const AnimalIn = db.AnimalIn
 //1.addanimalin
 
 const addAnimalIn = async (req,res) => {
+    console.log(42);
     let info = {
         Image: req.file.path,
         Nom: req.body.Nom,
@@ -22,15 +23,20 @@ const addAnimalIn = async (req,res) => {
         FamilleAccueil: req.body.FamilleAccueil,
         Note:req.body.Nom,
     }
+
+    console.log(info)
     const animalin = await AnimalIn.create(info)
     res.status(200).send(animalin)
     console.log(animalin)
 }
 //2. get all animalin
 
-const getAllAnimalIn = async (req,res) => {
-    let animalins = await AnimalIn.findAll({})
-    res.status(200).send(animalins) 
+const getAllAnimalIns = async (req,res) => {
+    console.log(42);
+    let animalIns = await AnimalIn.findAll({})
+    console.log(animalIns);
+    res.status(200).send(animalIns) 
+    
 }
 
 //3. get one animalin
@@ -81,11 +87,11 @@ const upload = multer({
         }
         cb('Give proper files formate to upload')
     }
-}).single('image')
+}).single('Image')
 
 module.exports = {
     addAnimalIn,
-    getAllAnimalIn,
+    getAllAnimalIns,
     getOneAnimalIn,
     updateAnimalIn,
     deleteAnimalIn,

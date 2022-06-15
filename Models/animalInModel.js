@@ -1,7 +1,7 @@
 
 
 
-const animalInModel = (Sequelize,DataTypes) => {
+module.exports = (Sequelize,DataTypes) => {
     const AnimalIn = Sequelize.define("AnimalIn",{
         Image:{
             type:DataTypes.STRING,
@@ -50,4 +50,3 @@ const animalInModel = (Sequelize,DataTypes) => {
     })
     return AnimalIn
 }
-module.exports = animalInModel

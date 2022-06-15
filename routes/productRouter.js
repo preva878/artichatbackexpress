@@ -29,11 +29,11 @@ router.get('/getProductReviews/:id', productController.getProductReviews)
 
 
 // Products router
-router.get('/:id', productController.getOneProduct)
+router.get('/product/:id', productController.getOneProduct)
 
-router.put('/:id', productController.updateProduct)
+router.put('/product/:id', productController.updateProduct)
 
-router.delete('/:id', productController.deleteProduct)
+router.delete('/product/:id', productController.deleteProduct)
 
 //import controller animalIn
 
@@ -45,11 +45,11 @@ const animalInController = require ('../controllers/animalInController')
 
 router.post('/addAnimalIn', animalInController.upload,animalInController.addAnimalIn)
 
-router.get('/getAllAnimalIn', animalInController.getAllAnimalIn)
+router.get('/getAllAnimalIns', animalInController.getAllAnimalIns)
 
 //check 2
 
-router.get('/:id',animalInController.getOneAnimalIn)
-router.put("/:id",animalInController.updateAnimalIn)
-router.delete('/:id',animalInController.deleteAnimalIn)
+router.get('/animalIn/:id',animalInController.getOneAnimalIn)
+router.put("/animalIn/:id",animalInController.updateAnimalIn)
+router.delete('/animalIn/:id',animalInController.deleteAnimalIn)
 module.exports = router
