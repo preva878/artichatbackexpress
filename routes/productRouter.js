@@ -57,7 +57,7 @@ router.get('/getAllFamilleAccueil',FamilleAccueilController.getallFamilleaccueil
 /********************************* */
 
 const SponsorController = require ('../controllers/sponsorController')
-router.post('/sponsor/addSponsor',SponsorController.addSponsor)
+router.post('/addSponsor',SponsorController.addSponsor)
 router.get('/getAllSponsor',SponsorController.getAllSponsors)
 
 /*********************************/
@@ -67,5 +67,17 @@ router.get('/getAllSponsor',SponsorController.getAllSponsors)
 const equipementsController = require('../controllers/equipementController')
 router.post('/postEquipement',equipementsController.upload,equipementsController.addEquipement)
 router.get('/getEquipements',equipementsController.getAllEquipements)
+
+
+/***********************************/
+/**           Veterinaires         */
+/** ****************************** */
+
+const veterinaireController = require ('../controllers/veterinaireController')
+router.post('/post/postVeterinaire',veterinaireController.addVeterinaire)
+router.get('/getVeterinaires',veterinaireController.getAllVeterinaires)
+
+
+
 
 module.exports = router
