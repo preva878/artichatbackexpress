@@ -23,7 +23,9 @@ app.options((req,res,next) =>{
 // routers
 const router = require('./routes/productRouter.js')
 
+
 app.use('/api', router)
+
 
 
 

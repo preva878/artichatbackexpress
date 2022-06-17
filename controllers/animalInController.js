@@ -21,7 +21,7 @@ const addAnimalIn = async (req,res) => {
         Etat: req.body.Etat,
         Traitement: req.body.Traitement ,
         FamilleAccueil: req.body.FamilleAccueil,
-        Note:req.body.Nom,
+        Note:req.body.Note,
     }
 
     console.log(info)
