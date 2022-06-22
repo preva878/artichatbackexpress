@@ -45,10 +45,7 @@ db.User = require('./userModel')(sequelize,DataTypes)
 db.Veterinaire = require('./veterinaireModel')(sequelize,DataTypes)
 
 
-db.sequelize.sync({ force: false })
-.then(() => {
-    console.log(`resync done`)
-})
+
 
 
 
@@ -94,6 +91,8 @@ db.Adoptant.hasMany(db.AnimalOut);
 db.User.hasOne(db.FamilleAccueil)
 db.FamilleAccueil.belongsTo(db.User)
 
+
+// db.sequelize.sync({ force: false }).then(() => {console.log(`resync done`)})
 
 
 module.exports = db

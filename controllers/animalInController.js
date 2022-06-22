@@ -46,6 +46,7 @@ const getOneAnimalIn = async (req, res) => {
     let animalin = await AnimalIn.findOne({where: {id:id}})
     res.status(200).sent(animalin)
 }
+
 //4. delete
 const deleteAnimalIn = async (req,res) => {
     let id = req.parmas.id
@@ -95,6 +96,7 @@ module.exports = {
     getOneAnimalIn,
     updateAnimalIn,
     deleteAnimalIn,
+    
 
     upload,
 
