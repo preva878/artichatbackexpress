@@ -20,7 +20,7 @@ const veterinaireModel = (sequelize,DataTypes) =>{
         },
         DateIntervention:{
             type: DataTypes.DATEONLY,
-            defaultValue:DataTypes.NOW,
+            
             allowNull: false
         },
         Prix:{
