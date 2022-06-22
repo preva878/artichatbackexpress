@@ -92,7 +92,7 @@ db.User.hasOne(db.FamilleAccueil)
 db.FamilleAccueil.belongsTo(db.User)
 
 
-// db.sequelize.sync({ force: false }).then(() => {console.log(`resync done`)})
+ //db.sequelize.sync({ alter: true }).then(() => {console.log(`resync done`)})
 
 
 module.exports = db

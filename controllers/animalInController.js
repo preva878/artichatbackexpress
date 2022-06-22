@@ -44,7 +44,7 @@ const getAllAnimalIns = async (req,res) => {
 const getOneAnimalIn = async (req, res) => {
     let id = req.params.id
     let animalin = await AnimalIn.findOne({where: {id:id}})
-    res.status(200).sent(animalin)
+    res.status(200).send(animalin)
 }
 
 //4. delete

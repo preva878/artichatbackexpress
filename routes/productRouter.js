@@ -33,7 +33,7 @@ router.post('/addAnimalOut', animalOutController.upload,animalOutController.addA
 router.get('/getAllAnimalOuts',animalOutController.getAllAnimalOut)
 //check 2
 
-router.get('/animalIn/:id',animalInController.getOneAnimalIn)
+router.get('animalIn/:id',animalInController.getOneAnimalIn)
 router.put("/animalIn/:id",animalInController.updateAnimalIn)
 router.delete('/animalIn/:id',animalInController.deleteAnimalIn)
 
