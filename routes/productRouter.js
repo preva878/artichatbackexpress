@@ -13,6 +13,7 @@ router.post('/addReview/:id', reviewController.addReview)
 // get product Reviews
 router.get('/getProductReviews/:id', productController.getProductReviews)
 // Products router
+
 router.get('/product/:id', productController.getOneProduct)
 router.put('/product/:id', productController.updateProduct)
 router.delete('/product/:id', productController.deleteProduct)
@@ -74,7 +75,9 @@ router.get('/getEquipements',equipementsController.getAllEquipements)
 /** ****************************** */
 
 const veterinaireController = require ('../controllers/veterinaireController')
-router.post('/post/postVeterinaire',veterinaireController.addVeterinaire)
+const userModel = require('../Models/userModel.js')
+const { products } = require('../Models/index.js')
+router.post('/postVeterinaire',veterinaireController.addVeterinaire)
 router.get('/getVeterinaires',veterinaireController.getAllVeterinaires)
 
 

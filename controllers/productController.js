@@ -50,6 +50,8 @@ const getOneProduct = async (req, res) => {
 
 }
 
+
+
 // 4. update Product
 
 const updateProduct = async (req, res) => {
