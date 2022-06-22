@@ -67,7 +67,7 @@ const updateAnimalIn = async (req, res) => {
 
 const storage = multer.diskStorage({
     destination:( req,file,cb) => {
-        cb(null,'./Images')
+        cb(null,'./Images/AnimalIn')
     },
     filename: (req,file,cb) => {
         cb(null,Date.now() + path.extname(file.originalname))

@@ -51,15 +51,15 @@ db.Veterinaire = require('./veterinaireModel')(sequelize,DataTypes)
 
 // 1 to Many Relation
 
-db.products.hasMany(db.reviews, {
-    foreignKey: 'product_id',
-    as: 'review'
-});
+// db.products.hasMany(db.reviews, {
+//     foreignKey: 'product_id',
+//     as: 'review'
+// });
 
-db.reviews.belongsTo(db.products, {
-    foreignKey: 'product_id',
-    as: 'product'
-});
+// db.reviews.belongsTo(db.products, {
+//     foreignKey: 'product_id',
+//     as: 'product'
+// });
 
 db.AnimalIn.belongsToMany(db.FamilleAccueil,{through:'AnimalInFA'});
 db.FamilleAccueil.belongsToMany(db.AnimalIn,{through:'AnimalInFA'});
